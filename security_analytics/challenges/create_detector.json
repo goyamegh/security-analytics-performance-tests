@@ -1,0 +1,33 @@
+{
+  "name": "create-detector-api",
+  "default": true,
+  "description": "",
+  "schedule": [
+    {
+      "parallel": {
+        "completed-by": "create-detector",
+        "tasks": [
+          {
+            "operation": {
+              "name": "create-detector",
+              "operation-type": "create-detector-api",
+              "param-source": "create-detector-param-source"
+            },
+            "clients": 4,
+            "warmup-time-period": 2,
+            "time-period": 15
+          },
+          {
+            "operation": {
+              "name": "index-windows-bg-job",
+              "operation-type": "index-windows",
+              "param-source": "index-windows-param-source"
+            },
+            "clients": 10,
+            "time-period": 60
+          }
+        ]
+      }
+    }
+  ]
+}

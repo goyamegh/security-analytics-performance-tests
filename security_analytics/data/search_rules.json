@@ -1,0 +1,15 @@
+{
+  "size": "500",
+  "query": {
+    "nested": {
+      "path": "rule",
+      "query": {
+        "bool": {
+          "must": [
+            { "match": { "rule.category": "windows" } }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+PUT /windows
+{
+        "mappings": {
+            "properties": {
+      "CommandLine": {
+        "type": "text"
+      },
+      "EventID": {
+        "type": "integer"
+      },
+      "HostName": {
+        "type": "text"
+      },
+      "Message": {
+        "type": "text"
+      },
+      "Provider_Name": {
+          "type": "text"
+      },
+      "ServiceName": {
+		  "type": "text"
+      }
+    }
+        },
+        "settings": {
+            "index": {
+                "number_of_shards": "1",
+                "number_of_replicas": "1"
+            }
+        }
+    }
+
+POST /_plugins/_security_analytics/mappings
+{
+   "index_name": "windows",
+   "rule_topic": "windows",
+   "partial": true,
+   "alias_mappings": {
+        "properties": {
+            "event_uid": {
+            "type": "alias",
+            "path": "EventID"
+          }
+       }
+   }
+}

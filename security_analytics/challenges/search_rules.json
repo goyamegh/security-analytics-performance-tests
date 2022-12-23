@@ -1,0 +1,32 @@
+{
+  "name": "search-rules-api",
+  "description": "",
+  "schedule": [
+    {
+      "parallel": {
+        "completed-by": "search-rules",
+        "tasks": [
+          {
+            "operation": {
+              "name": "search-rules",
+              "operation-type": "search-rules-api",
+              "param-source": "search-rules-param-source"
+            },
+            "clients": 4,
+            "warmup-time-period": 2,
+            "time-period": 15
+          },
+          {
+            "operation": {
+              "name": "index-windows-bg-job",
+              "operation-type": "index-windows",
+              "param-source": "index-windows-param-source"
+            },
+            "clients": 10,
+            "time-period": 60
+          }
+        ]
+      }
+    }
+  ]
+}

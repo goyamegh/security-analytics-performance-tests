@@ -1,0 +1,66 @@
+{
+  "alert_history_index_pattern": "",
+  "alert_history_index": "",
+  "monitor_id": [
+    ""
+  ],
+  "schedule": {
+    "period": {
+      "unit": "MINUTES",
+      "interval": 5
+    }
+  },
+  "inputs": [
+    {
+      "detector_input": {
+        "description": "windows detector for security analytics",
+        "custom_rules": [],
+        "indices": [
+          "windows"
+        ],
+        "pre_packaged_rules": [
+          {
+            "id": "06724b9a-52fc-11ed-bdc3-0242ac120002"
+          },
+          {
+            "id": "36a037c4-c228-4866-b6a3-48eb292b9955"
+          },
+          {
+            "id": "c6e91a02-d771-4a6d-a700-42587e0b1095"
+          },
+          {
+            "id": "e5a6b256-3e47-40fc-89d2-7a477edd6915"
+          },
+          {
+            "id": "5a919691-7302-437f-8e10-1fe088afa145"
+          }
+        ]
+      }
+    }
+  ],
+  "bucket_monitor_id_rule_id": {},
+  "alert_index": "",
+  "last_update_time": 1671748825674,
+  "triggers": [
+    {
+      "actions": [],
+      "ids": [],
+      "sev_levels": [],
+      "types": [
+        "test_windows"
+      ],
+      "name": "test-trigger",
+      "severity": "1",
+      "id": "4RX-O4UBqfMEr4jjsYdC",
+      "tags": []
+    }
+  ],
+  "detector_type": "TEST_WINDOWS",
+  "findings_index_pattern": "",
+  "name": "VyfXWtLPtu",
+  "rule_topic_index": "",
+  "type": "detector",
+  "findings_index": "",
+  "enabled_time": 1671748825674,
+  "enabled": true
+}
