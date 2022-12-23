@@ -3,7 +3,8 @@ elastic/rally extension for Opensearch Security-Analytics plugin
 
 ## Reference
 
-[Opensearch-Security-Analytics](https://github.com/opensearch-project/security-analytics)
+- [Opensearch-Security-Analytics](https://github.com/opensearch-project/security-analytics)
+- [Elastic/rally](https://github.com/elastic/rally)
 
 ## Install the extension
 
