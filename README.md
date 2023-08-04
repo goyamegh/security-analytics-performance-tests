@@ -29,10 +29,23 @@ esrally list tracks --track-path="security_analytics"
 esrally info --track-path="security_analytics"
 ```
 
+### Rally report config in `rally.ini`
+
+```commandline
+[reporting]
+datastore.type = elasticsearch
+datastore.host = <os-ip>
+datastore.port = 80
+datastore.secure = true
+datastore.ssl.verification_mode = none
+datastore.user = <user>
+datastore.password = <passwd>
+```
+
 ### Run race against a remote Opensearch cluster
 
 ```commandline
-esrally race --target-hosts=127.0.0.1:39159 --pipeline=benchmark-only --challenge=create-detector-api --track-path="security_analytics"
+esrally race --target-hosts=cluster-ip:80 --client-options="use_ssl:true,verify_certs:false,basic_auth_user:'<user>',basic_auth_password:'<passwd>'" --pipeline=benchmark-only --challenge=search-findings-api --track-path="security_analytics"
 ```
 
 ## Extend the extension with new performance test scenarios

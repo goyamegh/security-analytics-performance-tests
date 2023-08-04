@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "product": {
+      "version": "1.03",
+      "name": "CloudTrail",
+      "vendor_name": "AWS",
+      "feature": {
+        "name": "Management, Data, and Insights"
+      }
+    },
+    "uid": "6f4ab5bd-2daa-4d00-be14-d92efEXAMPLE",
+    "profiles": [
+      "cloud"
+    ],
+    "version": "1.0.0-rc.2"
+  },
+  "time": 1459524708000,
+  "cloud": {
+    "region": "us-west-2",
+    "provider": "AWS"
+  },
+  "api": {
+    "response": {
+      "error": null,
+      "message": null
+    },
+    "operation": "CreateLoadBalancer",
+    "version": "2015-12-01",
+    "service": {
+      "name": "elasticloadbalancing.amazonaws.com"
+    },
+    "request": {
+      "uid": "b9960276-b9b2-11e3-8a13-f1ef1EXAMPLE"
+    }
+  },
+  "resources": null,
+  "actor": {
+    "user": {
+      "type": "IAMUser",
+      "name": "Alice",
+      "uid": "123456789012",
+      "uuid": "arn:aws:iam::123456789012:user/Alice",
+      "account_uid": "123456789012",
+      "credential_uid": "AKIAIOSFODNN7EXAMPLE"
+    },
+    "session": {
+      "created_time": null,
+      "mfa": null,
+      "issuer": null
+    },
+    "invoked_by": null,
+    "idp": {
+      "name": null
+    }
+  },
+  "http_request": {
+    "user_agent": "aws-cli/1.10.10 Python/2.7.9 Windows/7 botocore/1.4.1"
+  },
+  "src_endpoint": {
+    "uid": null,
+    "ip": "198.51.100.1",
+    "domain": null
+  },
+  "class_name": "API Activity",
+  "class_uid": 3005,
+  "category_name": "Audit Activity",
+  "category_uid": 3,
+  "severity_id": 1,
+  "severity": "Informational",
+  "status": "Success",
+  "status_id": 1,
+  "activity_name": "Create",
+  "activity_id": 1,
+  "type_uid": 300501,
+  "type_name": "API Activity: Create",
+  "unmapped": [
+    [
+      "responseElements.loadBalancers[].state.code",
+      "provisioning"
+    ],
+    [
+      "responseElements.loadBalancers[].canonicalHostedZoneId",
+      "Z2P70J7HTTTPLU"
+    ],
+    [
+      "responseElements.loadBalancers[].availabilityZones[].subnetId",
+      "subnet-8360a9e7,subnet-b7d581c0"
+    ],
+    [
+      "responseElements.loadBalancers[].loadBalancerName",
+      "my-load-balancer"
+    ],
+    [
+      "responseElements.loadBalancers[].type",
+      "application"
+    ],
+    [
+      "responseElements.loadBalancers[].dNSName",
+      "my-load-balancer-1836718677.us-west-2.elb.amazonaws.com"
+    ],
+    [
+      "eventType",
+      "AwsApiCall"
+    ],
+    [
+      "responseElements.loadBalancers[].vpcId",
+      "vpc-3ac0fb5f"
+    ],
+    [
+      "responseElements.loadBalancers[].securityGroups[]",
+      "sg-5943793c"
+    ],
+    [
+      "requestParameters.subnets[]",
+      "subnet-8360a9e7,subnet-b7d581c0"
+    ],
+    [
+      "requestParameters.securityGroups[]",
+      "sg-5943793c"
+    ],
+    [
+      "responseElements.loadBalancers[].scheme",
+      "internet-facing"
+    ],
+    [
+      "responseElements.loadBalancers[].availabilityZones[].zoneName",
+      "us-west-2a,us-west-2b"
+    ],
+    [
+      "recipientAccountId",
+      "123456789012"
+    ],
+    [
+      "responseElements.loadBalancers[].createdTime",
+      "Apr 11, 2016 5:23:50 PM"
+    ],
+    [
+      "responseElements.loadBalancers[].loadBalancerArn",
+      "arn:aws:elasticloadbalancing:us-west-2:123456789012:loadbalancer/app/my-load-balancer/ffcddace1759e1d0"
+    ],
+    [
+      "requestParameters.scheme",
+      "internet-facing"
+    ],
+    [
+      "requestParameters.name",
+      "my-load-balancer"
+    ]
+  ]
+}

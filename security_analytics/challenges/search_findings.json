@@ -1,0 +1,31 @@
+{
+  "name": "search-findings-api",
+  "description": "",
+  "schedule": [
+    {
+      "parallel": {
+        "completed-by": "search-findings",
+        "tasks": [
+          {
+            "operation": {
+              "name": "search-findings",
+              "operation-type": "search-findings-api"
+            },
+            "clients": 4,
+            "warmup-time-period": 2,
+            "time-period": 36000
+          },
+          {
+            "operation": {
+              "name": "index-cloudtrail-ocsf-job",
+              "operation-type": "index-cloudtrail-ocsf",
+              "param-source": "index-cloudtrail-ocsf-param-source"
+            },
+            "clients": 10,
+            "time-period": 36000
+          }
+        ]
+      }
+    }
+  ]
+}
