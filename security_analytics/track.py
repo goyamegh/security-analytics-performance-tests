@@ -14,6 +14,7 @@ def register(registry):
     registry.register_runner("search-rules-api", search_rules_runner.search_rules, async_runner=True)
     registry.register_runner("index-windows", index_windows_runner.index_windows, async_runner=True)
     registry.register_runner("search-findings-api", search_findings_runner.search_findings, async_runner=True)
+    registry.register_runner("search-findings-windows-api", search_findings_runner.search_findings, async_runner=True)
     registry.register_runner("index-cloudtrail-ocsf", index_cloudtrail_ocsf_runner.index_cloudtrail_ocsf, async_runner=True)
     registry.register_param_source("create-detector-param-source", CreateDetectorParamSource)
     registry.register_param_source("search-rules-param-source", SearchRulesParamSource)

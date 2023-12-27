@@ -1,0 +1,21 @@
+{
+  "name": "search-findings-windows-api",
+  "description": "",
+  "schedule": [
+    {
+      "parallel": {
+        "tasks": [
+          {
+            "operation": {
+              "name": "index-windows-job",
+              "operation-type": "index-windows",
+              "param-source": "index-windows-param-source"
+            },
+            "clients": 300,
+            "iterations": 1000
+          }
+        ]
+      }
+    }
+  ]
+}
